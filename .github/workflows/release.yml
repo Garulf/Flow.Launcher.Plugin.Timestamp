@@ -58,6 +58,6 @@ jobs:
         with:
           draft: true
           files: "./${{github.event.repository.name}}.zip"
-          tag_name: "v${{steps.version.outputs.version}}"
+          tag_name: "v${{steps.version.outputs.prop}}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

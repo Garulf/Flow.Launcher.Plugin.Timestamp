@@ -7,13 +7,13 @@ on:
     branches: [ master ]
     tags-ignore:
       - 'v*'
-    paths-ignore: 
+    paths-ignore:
       - .github/workflows/*
       - README.md
       - assets/*
 jobs:
   deps:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/master' }}
     name: "Build"
     runs-on: windows-latest
     steps:

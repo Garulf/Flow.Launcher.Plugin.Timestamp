@@ -3,7 +3,7 @@ name: Publish Release
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths-ignore:
       - .github/workflows/*
 
@@ -35,7 +35,7 @@ jobs:
           msgfmt ./plugin/translations/zh_CN/LC_MESSAGES/messages.po -o ./plugin/translations/zh_CN/LC_MESSAGES/messages.mo
           zip -r Flow.Launcher.Plugin.TimeStamp.zip . -x '*.git*'
       - name: Publish
-        if: success() && github.ref == 'refs/heads/main'
+        if: success()
         uses: softprops/action-gh-release@v1
         with:
           files: 'Flow.Launcher.Plugin.TimeStamp.zip'

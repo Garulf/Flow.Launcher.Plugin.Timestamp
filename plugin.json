@@ -4,7 +4,7 @@
     "Name": "Timestamp",
     "Description": "A time plugin for Flow.",
     "Author": "Zeroto521",
-    "Version": "1.0.7",
+    "Version": "1.0.8",
     "Language": "python",
     "Website": "https://github.com/Zeroto521/Flow.Launcher.Plugin.Timestamp",
     "IcoPath": "assets/favicon.ico",

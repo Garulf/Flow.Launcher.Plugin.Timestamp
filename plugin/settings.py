@@ -19,7 +19,7 @@ LOCAL = os.getenv("local", "en")
 
 # the information of package
 __package_name__ = "timestamp"
-__version__ = "1.0.7"
+__version__ = "1.0.8"
 __short_description__ = "A time plugin for Flow."
 GITHUB_USERNAME = "Zeroto521"
 __license__ = 'MIT'

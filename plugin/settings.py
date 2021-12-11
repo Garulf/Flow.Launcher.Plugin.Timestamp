@@ -14,8 +14,10 @@ if os.path.exists(dotenv_path):
 
 
 # The default value can work, if no user config.
-LOCAL = os.getenv("local", "en")
+LOCAL = os.getenv("local", "en_US")
 
+if LOCAL not in ['en_US', 'zh_CN']:
+    LOCAL = 'en_US' # case where the env local returns "'en'  # en or zh" instead
 
 # the information of package
 __package_name__ = "timestamp"
@@ -26,7 +28,9 @@ __license__ = 'MIT'
 
 
 readme_path = os.path.join(basedir, 'README.md')
-__long_description__ = open(readme_path, "r").read()
+__long_description__ = ''
+if Path(readme_path).exists():
+    __long_description__ = open(readme_path, "r").read()
 
 
 # other information

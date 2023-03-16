@@ -17,7 +17,7 @@ class Main(FlowLauncher):
         result = []
         param = param.strip()
 
-        stamp = int(time.time())
+        stamp = int(param) if param.isnumeric() and len(param) <= 10 else int(time.time())
         date = time.strftime(
             "%Y{0}%m{0}%d".format(DATE_SPLIT_SYMBOL), time.localtime(stamp))
         nowt = time.strftime(
